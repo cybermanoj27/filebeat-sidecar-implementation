@@ -75,8 +75,8 @@ spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 8090
-      targetPort: 8090
+      port: 80
+      targetPort: 80
   selector:
     app: hello-pod
 
