@@ -18,7 +18,7 @@ data:
           var.paths: ["/var/log/nginx/error.log*"]
     output:
       elasticsearch:
-        hosts: ["elasticsearch:9200"]
+        hosts: ["centos-desktop.lan:9200"]
     
 ---
 apiVersion: apps/v1
@@ -75,8 +75,8 @@ spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 8090
+      targetPort: 8090
   selector:
     app: hello-pod
 
